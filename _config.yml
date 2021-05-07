@@ -4,7 +4,7 @@ title: "Mahmud's Thoughts"
 description: "আব্দুল্যাহ আদিল মাহমুদ। প্রভাষক, পরিসংখ্যান বিভাগ, পাবনা ক্যাডেট কলেজ এবং ডেটা অ্যানালিস্ট ও বিজ্ঞান লেখক "
 logo: 'assets/images/logo.jpg'
 favicon: 'assets/images/logo.jpg'
-baseurl: "/"
+baseurl: ""
 google_analytics: ''
 disqus: mahmudblog
 mailchimp-list: 'https://github.us7.list-manage.com/subscribe/post?u=fb245679a93a6d0bd6681211b&amp;id=f02c47251c'
