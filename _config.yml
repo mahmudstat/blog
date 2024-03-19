@@ -1,7 +1,7 @@
 # Site
 name: "Thinker Mahmud"
 title: "Mahmud's Thoughts"
-description: "আব্দুল্যাহ আদিল মাহমুদ। প্রভাষক, পরিসংখ্যান বিভাগ, পাবনা ক্যাডেট কলেজ এবং ডেটা অ্যানালিস্ট ও বিজ্ঞান লেখক "
+description: "আব্দুল্যাহ আদিল মাহমুদ। প্রভাষক, পরিসংখ্যান বিভাগ, সিলেট ক্যাডেট কলেজ এবং ডেটা অ্যানালিস্ট ও বিজ্ঞান লেখক "
 logo: 'assets/images/logo.jpg'
 favicon: 'assets/images/logo.jpg'
 baseurl: "/"
