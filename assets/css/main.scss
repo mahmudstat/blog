@@ -13,3 +13,26 @@
 	"syntax",
     "starsnonscss"
 ;
+
+/* Custom category styles */
+.categories-list ul {
+  padding-left: 0;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.categories-list li {
+  display: inline-block;
+  margin-right: 15px;
+}
+
+.categories-list a {
+  font-size: 18px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #007bff;  /* Change the color as needed */
+}
+
+.categories-list a:hover {
+  text-decoration: underline;
+}
