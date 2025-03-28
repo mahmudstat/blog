@@ -10,6 +10,7 @@ disqus: mahmudblog
 mailchimp-list: 'https://github.us7.list-manage.com/subscribe/post?u=fb245679a93a6d0bd6681211b&amp;id=f02c47251c'
 include: ["_pages"]
 permalink: /:title.tm
+future: true
 
 # Authors
 authors:
