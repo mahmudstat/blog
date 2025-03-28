@@ -14,25 +14,55 @@
     "starsnonscss"
 ;
 
-/* Custom category styles */
+/* Custom Tag Styles */
+.tags-heading h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #333;
+}
+
 .categories-list ul {
   padding-left: 0;
   margin-bottom: 20px;
   text-align: center;
+  list-style-type: none;
 }
 
 .categories-list li {
   display: inline-block;
-  margin-right: 15px;
+  margin-right: 20px; /* More space between tags */
+  margin-bottom: 15px;
 }
 
 .categories-list a {
   font-size: 18px;
   font-weight: bold;
   text-decoration: none;
-  color: #007bff;  /* Change the color as needed */
+  color: #007bff;  /* Blue color for links */
+  padding: 10px;
+  display: inline-flex;
+  align-items: center;
+  border-radius: 5px; /* Rounded corners */
+  background-color: #f7f7f7; /* Light background color */
+  transition: all 0.3s ease;
 }
 
 .categories-list a:hover {
-  text-decoration: underline;
+  background-color: #007bff;  /* Change background on hover */
+  color: white;  /* Change text color on hover */
+}
+
+.categories-list a i {
+  margin-right: 8px;  /* Space between icon and text */
+  font-size: 20px;  /* Icon size */
+}
+
+.categories-list a:hover i {
+  color: white;  /* Icon color on hover */
+}
+
+/* Add space at the bottom */
+.categories-list li:last-child {
+  margin-right: 0;
 }

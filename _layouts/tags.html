@@ -1,27 +1,50 @@
+
 ---
 title: "Tags"
 layout: default
 permalink: "/tags.html"
 ---
 
-<div class="row listrecent">
-{% for tag in site.tags %}
-  <div class="section-title col-md-12 mt-4">
-    <h2 id="{{ tag[0] | replace: " ","-" }}">Tag <span class="text-capitalize">{{ tag[0] }}</span></h2>
-  </div>
 
-  {% assign pages_list = tag[1] %}
-  {% for post in pages_list %}
-    {% if post.title != null %}
-      {% if group == null or group == post.group %}
-        <div class="post-list">
-          <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
-          <p><strong>{{ post.author }}</strong> | {{ post.date | date: "%B %d, %Y" }}</p>
-        </div>
+<!-- Heading for Tags List -->
+<div class="tags-heading text-center">
+  <h2>Explore Popular Tags</h2>
+</div>
+
+<!-- Horizontal List of Tags with Icons -->
+<div class="categories-list">
+  <ul class="list-inline">
+    {% for tag in site.tags %}
+      <li class="list-inline-item">
+        <a href="#{{ tag[0] | replace: " ","-" }}" class="category-link">
+          <i class="fas fa-tag"></i> {{ tag[0] }}
+        </a>
+      </li>
+    {% endfor %}
+  </ul>
+</div>
+
+Also explore the [categories](/categories.html)
+
+<!-- Tags Content Section -->
+<div class="row listrecent">
+  {% for tag in site.tags %}
+    <div class="section-title col-md-12 mt-4">
+      <h2 id="{{ tag[0] | replace: " ","-" }}">Tag <span class="text-capitalize">{{ tag[0] }}</span></h2>
+    </div>
+
+    {% assign pages_list = tag[1] %}
+    {% for post in pages_list %}
+      {% if post.title != null %}
+        {% if group == null or group == post.group %}
+          <div class="post-list">
+            <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+            <p><strong>{{ post.author }}</strong> | {{ post.date | date: "%B %d, %Y" }}</p>
+          </div>
+        {% endif %}
       {% endif %}
-    {% endif %}
+    {% endfor %}
+    {% assign pages_list = nil %}
+    {% assign group = nil %}
   {% endfor %}
-  {% assign pages_list = nil %}
-  {% assign group = nil %}
-{% endfor %}
 </div>
