@@ -1,10 +1,8 @@
-
 ---
 title: "Tags"
 layout: default
 permalink: "/tags.html"
 ---
-
 
 <!-- Heading for Tags List -->
 <div class="tags-heading text-center">
@@ -14,7 +12,8 @@ permalink: "/tags.html"
 <!-- Horizontal List of Tags with Icons -->
 <div class="categories-list">
   <ul class="list-inline">
-    {% for tag in site.tags %}
+    {% assign sorted_tags = site.tags | sort %}
+    {% for tag in sorted_tags %}
       <li class="list-inline-item">
         <a href="#{{ tag[0] | replace: " ","-" }}" class="category-link">
           <i class="fas fa-tag"></i> {{ tag[0] }}
@@ -24,13 +23,13 @@ permalink: "/tags.html"
   </ul>
 </div>
 
-Also explore the [categories](/categories.html)
+Also explore the [categories](categories)
 
 <!-- Tags Content Section -->
 <div class="row listrecent">
-  {% for tag in site.tags %}
+  {% for tag in sorted_tags %}
     <div class="section-title col-md-12 mt-4">
-      <h2 id="{{ tag[0] | replace: " ","-" }}">Tag <span class="text-capitalize">{{ tag[0] }}</span></h2>
+      <h2 id="{{ tag[0] | replace: " ","-" }}"><span class="text-capitalize">{{ tag[0] }}</span></h2>
     </div>
 
     {% assign pages_list = tag[1] %}
