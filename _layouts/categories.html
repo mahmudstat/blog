@@ -28,8 +28,7 @@ Also explore the <a href="/tags.html">tags</a>.
       {% if post.title != null %}
         {% if group == null or group == post.group %}
           <div class="post-list">
-            <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
-            <p><strong>{{ post.author }}</strong> | {{ post.date | date: "%B %d, %Y" }}</p>
+            <p><strong>{{ post.author }}</strong> | {{ post.date | date: "%B %d, %Y" }} | <a href="{{ post.url }}">{{ post.title }}</a></p>
           </div>
         {% endif %}
       {% endif %}

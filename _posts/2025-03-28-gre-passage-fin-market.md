@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "GRE Text: The Illusion of Stability in Financial Markets"
-author: mahmud
+author: desk
 categories: [ writing, statistics ]
 tags: [ gre, RC ]
 image: assets/images/reading.jpeg
