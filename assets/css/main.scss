@@ -66,3 +66,14 @@
 .categories-list li:last-child {
   margin-right: 0;
 }
+
+.post-list {
+  width: 100%;
+  clear: both; /* Ensures that it starts on a new line */
+}
+
+.post-item {
+  display: block; /* Ensures the entire line breaks */
+  margin-bottom: 15px; /* Adds space between items */
+}
+
