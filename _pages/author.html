@@ -1,0 +1,18 @@
+---
+layout: default
+title: "{{ page.author }}'s Posts"
+permalink: "/author/{{ page.author | slugify }}/"
+author: "{{ page.author }}"
+---
+<h1>{{ page.author }}'s Posts</h1>
+
+<div class="author-posts">
+  {% assign author_posts = site.posts | where: "author", page.author %}
+  {% for post in author_posts %}
+    <div class="post-item">
+      <a href="{{ post.url }}">{{ post.title }}</a>
+      <p>{{ post.excerpt }}</p>
+      <p><small>{{ post.date | date: "%B %d, %Y" }}</small></p>
+    </div>
+  {% endfor %}
+</div>
