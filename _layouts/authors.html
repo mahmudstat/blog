@@ -6,31 +6,41 @@ permalink: "/authors.html"
 
 <h1>Authors</h1>
 
-<!-- Debugging: Print all authors -->
-<p>Available authors: {{ site.authors | inspect }}</p>
+<!-- Debug output -->
+<p>Data authors: {{ site.data.authors | inspect }}</p>
+<p>Config authors: {{ site.authors | inspect }}</p>
 
 <div class="authors-list">
+  <!-- Use site.data.authors if that's where your data is -->
+  {% assign authors = site.data.authors | default: site.authors %}
+  {% assign author_names = authors | keys %}
+
   <ul class="list-inline">
-    {% assign sorted_authors = site.authors | sort %}
-    {% for author in sorted_authors %}
+    {% for author_key in author_names %}
+      {% assign author = authors[author_key] %}
       <li class="list-inline-item">
-        <a href="#{{ author[0] | slugify }}" class="author-link">{{ author[0] }}</a>
+        <a href="#{{ author_key | slugify }}" class="author-link">
+          {{ author.name }}
+        </a>
       </li>
     {% endfor %}
   </ul>
 </div>
 
 <div class="row listrecent">
-  {% for author in sorted_authors %}
+  {% for author_key in author_names %}
+    {% assign author = authors[author_key] %}
     <div class="section-title col-md-12 mt-4">
-      <h2 id="{{ author[0] | slugify }}"><span class="text-capitalize">{{ author[0] }}</span></h2>
+      <h2 id="{{ author_key | slugify }}">
+        <span class="text-capitalize">{{ author.name }}</span>
+      </h2>
+      {% if author.bio %}<p>{{ author.bio }}</p>{% endif %}
     </div>
 
-    {% assign author_posts = site.posts | where: "author", author[0] %}
+    {% assign author_posts = site.posts | where: "author", author_key %}
     {% for post in author_posts %}
       <div class="post-list">
         <p class="post-item">
-          <strong><a href="/author/{{ author[0] | slugify }}/">{{ author[0] }}</a></strong> |
           {{ post.date | date: "%B %d, %Y" }} |
           <a href="{{ post.url }}">{{ post.title }}</a>
         </p>
