@@ -12,6 +12,12 @@ include: ["_pages"]
 permalink: /:title.tm
 future: true
 
+collections:
+  authors:
+    output: true
+    permalink: /author/:name/
+
+
 # Authors
 authors:
   mahmud:
