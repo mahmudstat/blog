@@ -1,0 +1,11 @@
+mahmud:
+  name: "Abdullah Al Mahmud"
+  avatar: "assets/images/authors/mahmud.jpg"
+  description: "Lecturer at Sylhet Cadet College"
+  twitter: "https://twitter.com/thinkermahmud"
+
+sal:
+  name: "Sal"
+  avatar: "assets/images/authors/sal.jpg"
+  description: "Author of Mediumish"
+  twitter: "https://twitter.com/wowthemesnet"
