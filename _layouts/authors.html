@@ -1,0 +1,32 @@
+---
+title: "Authors"
+layout: default
+permalink: "/authors.html"
+---
+
+Also explore the <a href="/categories.html">categories</a> and <a href="/tags.html">tags</a>.
+
+<div class="authors-list">
+  <ul class="list-inline">
+    {% for author in site.data.authors %}
+      <li class="list-inline-item">
+        <a href="#{{ author[0] | slugify }}" class="author-link">{{ author[1].name }}</a>
+      </li>
+    {% endfor %}
+  </ul>
+</div>
+
+<div class="row listrecent">
+  {% for author in site.data.authors %}
+    <div class="section-title col-md-12 mt-4">
+      <h2 id="{{ author[0] | slugify }}"><span class="text-capitalize">{{ author[1].name }}</span></h2>
+    </div>
+
+    {% assign author_posts = site.posts | where: "author", author[0] %}
+    {% for post in author_posts %}
+      <div class="post-list">
+        <p class="post-item"><strong><a href="/author/{{ author[0] | slugify }}/">{{ author[1].name }}</a></strong> | {{ post.date | date: "%B %d, %Y" }} | <a href="{{ post.url }}">{{ post.title }}</a></p>
+      </div>
+    {% endfor %}
+  {% endfor %}
+</div>
