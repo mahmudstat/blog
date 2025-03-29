@@ -63,7 +63,7 @@ title: Home
   <div class="category-section">
     <h3>Category 1 Posts</h3>
     <ul>
-      {% assign posts = site.categories['your-manual-category-1'] | sort: 'date' | limit: 5 %}
+      {% assign posts = site.categories['tour'] | sort: 'date' | limit: 5 %}
       {% for post in posts %}
         <li>
           <a href="{{ post.url }}">{{ post.title }}</a>
