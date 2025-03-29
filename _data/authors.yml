@@ -1,11 +1,27 @@
 mahmud:
-  name: "Abdullah Al Mahmud"
-  avatar: "assets/images/authors/mahmud.jpg"
-  description: "Lecturer at Sylhet Cadet College"
-  twitter: "https://twitter.com/thinkermahmud"
+    name: Abdullah Al Mahmud
+    display_name: Abdullah Al Mahmud
+    avatar: 'assets/images/authors/mahmud.jpg'
+    gravatar: b1cc14991db7a456fcd761680bbc8f81
+    email: almahmud.sbi@gmail.com
+    web: https://www.thinkermahmud.com/blog/
+    twitter: https://twitter.com/thinkermahmud
+    description: "Lecturer at Sylhet Cadet College"
 
 sal:
-  name: "Sal"
-  avatar: "assets/images/authors/sal.jpg"
-  description: "Author of Mediumish"
-  twitter: "https://twitter.com/wowthemesnet"
+    name: Sal
+    display_name: Sal
+    gravatar: e56154546cf4be74e393c62d1ae9f9d4
+    email: wowthemesnet@gmail.com
+    web: https://www.wowthemes.net
+    twitter: https://twitter.com/wowthemesnet
+    description: "Author of Mediumish, a Bootstrap Medium styled template available for WordPress, HTML, Ghost and Jekyll. You are currently previewing Jekyll template demo."
+
+desk:
+    name: Desk Post
+    display_name: Desk
+    gravatar: e56154546cf4be74e393c62d1ae9f9d4
+    email: wowthemesnet@gmail.com
+    web: https://www.wowthemes.net
+    twitter: https://twitter.com/wowthemesnet
+    description: "Random Writer"
