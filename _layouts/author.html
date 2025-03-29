@@ -20,3 +20,8 @@ title: "Posts by {{ page.title }}"
     </div>
   {% endfor %}
 </div>
+
+<h1>Posts by {{ page.title }}</h1>
+
+<p>Author Data: {{ site.data.authors[page.title] | inspect }}</p>
+<p>Posts Count: {{ site.posts | where: "author", page.title | size }}</p>
