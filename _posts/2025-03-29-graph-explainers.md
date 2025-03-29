@@ -7,7 +7,7 @@ tags: [ ielts, english ]
 image: assets/images/writing.jpeg
 description: "List of versatile words and phrases to effectively describe tables and graphs"
 hidden: false
-featured: true
+#featured: true
 ---
 
 Here's a list of versatile words and phrases to effectively describe tables and graphs, categorized for clarity:
