@@ -6,6 +6,9 @@ permalink: "/authors.html"
 
 <h1>Authors</h1>
 
+<!-- Debugging: Print all authors -->
+<p>Available authors: {{ site.authors | inspect }}</p>
+
 <div class="authors-list">
   <ul class="list-inline">
     {% assign sorted_authors = site.authors | sort %}
