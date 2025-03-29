@@ -23,5 +23,28 @@ title: "Posts by {{ page.title }}"
 
 <h1>Posts by {{ page.title }}</h1>
 
+<!-- Debugging the author data -->
 <p>Author Data: {{ site.data.authors[page.title] | inspect }}</p>
+
+<!-- Checking posts for the author -->
 <p>Posts Count: {{ site.posts | where: "author", page.title | size }}</p>
+
+<div class="author-info">
+  <img src="{{ site.baseurl }}{{ site.data.authors[page.title].avatar }}" alt="{{ site.data.authors[page.title].name }}">
+  <p>{{ site.data.authors[page.title].description }}</p>
+  <a href="{{ site.data.authors[page.title].twitter }}" target="_blank">Follow on Twitter</a>
+</div>
+
+<div class="author-posts">
+  {% assign author_posts = site.posts | where: "author", page.title %}
+  {% if author_posts %}
+    {% for post in author_posts %}
+      <div class="post-summary">
+        <a href="{{ post.url }}">{{ post.title }}</a>
+        <p>{{ post.date | date: "%B %d, %Y" }}</p>
+      </div>
+    {% endfor %}
+  {% else %}
+    <p>No posts found for this author.</p>
+  {% endif %}
+</div>
